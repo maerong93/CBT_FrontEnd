@@ -1,0 +1,81 @@
+.bank_container_wrap {
+  width: 100%;
+}
+
+.bank_container_body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.125em;
+}
+
+.bank_upper_area {
+  display: flex;
+  margin: 0 0 2.5rem;
+}
+
+.bank_upper_area select {
+  margin-right: var(--m-6);
+}
+
+.bank_upper_area input {
+  min-width: 320px;
+}
+
+.bank_search_btn {
+  border-radius: 4px;
+  margin: 0 var(--m-6);
+}
+
+.bank_part {
+  width: calc((100% - 2.125em) / 2);
+}
+
+.bank_card_container {
+  position: relative;
+  overflow-y: hidden;
+  height: 28em;
+}
+
+.bank_card_title p {
+  flex: 1 1;
+  font-size: 2rem;
+  color: var(--white);
+  padding-left: var(--m-6);
+}
+
+.bank_list {
+  margin-top: -1.25em;
+}
+
+.bank_iconBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.bank_modal_iconBtn_wrap {
+  position: fixed;
+  right: 4em;
+  bottom: 2em;
+  text-align: center;
+}
+
+.bank_modal_iconBtn {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin-right: 0;
+}
+
+.bank_modal_iconBtn_wrap p {
+  font-size: var(--fs-18);
+  padding-top: var(--m-6);
+  font-weight: var(--fw-bold);
+}
+
+.bank_iconBtn svg,
+.bank_modal_iconBtn svg {
+  margin-right: 0;
+}

@@ -1,0 +1,5 @@
+/* .viewBtn {background-color: var(--main-500);} */
+button.viewBtn {background-color: rgba(25, 59, 104, .1); color: #404348;}
+button.viewBtn:hover, button.viewBtn:active {background-color: rgba(25, 59, 104, .18); color: #161718;}
+
+.noneList td {border-bottom: none;}

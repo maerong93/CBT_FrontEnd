@@ -1,0 +1,49 @@
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.item_strap_wrap {
+  margin-right: 1rem;
+  padding: 0 1.25em;
+}
+
+.item_strap {
+  border-bottom: 1px solid var(--line-030);
+}
+
+.content {
+  flex: 1 1 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content_strap {
+  flex: 1 1 60%;
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.test_name {
+  flex: 1 1 20%;
+  color: var(--grey-600);
+}
+
+.test_name_strap {
+  flex: 1 1 20%;
+}
+
+.btn_wrap {
+  flex: 1 1 10%;
+}
+
+.btn_strap {
+  flex: 1 1 10%;
+}

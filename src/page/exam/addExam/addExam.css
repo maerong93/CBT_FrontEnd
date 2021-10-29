@@ -1,0 +1,9 @@
+/* required */
+.required > div:first-of-type span::before {content: "*"; position: absolute; top: -4px; left: -10px; font-size: var(--fs-16);}
+
+/* sheet-row-table */
+.sheet-row-table .files-container .del-btn {background-color: var(--grey-300); color: var(--grey-800);}
+.sheet-row-table .files-container .del-btn:hover {background-color: var(--grey-400);}
+
+/* add-file-container */
+/*.add-file-container > div:first-of-type span::after {content: "※ 수정시, 이미지는 변경사항 없어도 무조건 다시 등록해 주세요. 그렇지 않으면, 이미지는 삭제되어 저장됩니다. ※"; margin-left: 10px; font-size: var(--fs-16); color: var(--white);}*/

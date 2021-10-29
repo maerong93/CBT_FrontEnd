@@ -1,0 +1,108 @@
+/* addExamWrap */
+section.addExamWrap {display: flex; width: calc(100% - 320px); max-height: calc(100% - var(--header-height)); position: fixed; z-index: 1; transition: var(--transition);}
+section.addExamWrapFull {width: 100%;}
+.addExamWrap .view-btn {background-color: var(--grey-300); color: var(--font-color-010);}
+
+/* mainContents */
+.mainContents {width: 100%; position: relative;}
+.mainContents h1 {user-select: none;}
+.mainContents h1:nth-of-type(1) span::after {content: "(문제는 총 80개까지 등록 가능합니다.)"; margin-left: 0.5em; font-size: var(--fs-18); letter-spacing: -0.1rem;}
+
+/* examInfo */
+.examInfo {display: inline-flex; margin-bottom: 2.5em; user-select: none;}
+.examInfo li {margin-right: 16px;}
+.examInfo li::after {content: "|"; margin-left: 16px; color: var(--grey-400)}
+.examInfo li:last-child:after {content: "";}
+
+/* inputsContainer */
+.inputsContainer {display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 2.125em;}
+.inputsContainer article {flex: 1 1; height: inherit;}
+.inputsContainer article.hide {height: fit-content;}
+.inputsContainer article:nth-of-type(1) {margin-bottom: 0;}
+.inputsContainer article:nth-of-type(2) {margin-left: 1.25em;}
+.inputsContainer article.hide {height: fit-content;}
+
+/* 문제유형, 배점 */
+.select, .score {min-width: 250px;}
+
+/* 이미지 정렬 */
+.imgOption, .imgOption label {display: flex; align-items: center;}
+.imgOption span {margin-right: 1.2em; font-weight: var(--fw-bold);}
+.imgOption .radioBtn {position: relative; border: 1px solid var(--grey-400); background-color: var(--white); color: var(--grey-400); box-shadow: 3px 2px 3px 0px rgba(197, 208, 216, 0.3);}
+.imgOption .radioBtn:first-of-type {margin-right: 0.7em;}
+.imgOption div {display: inline-flex; align-items: center;}
+.imgOption svg {display: none;}
+
+.imgOption label.active.radioBtn {background-color: var(--main-200); border: 1px solid #a4b7da; color: var(--main-300);}
+.imgOption label.active.radioBtn svg {display: inline;}
+
+/* 동영상 탭 */
+.tabBtnWrap {display: flex;  margin-bottom: 20px; border-bottom: 1px solid var(--grey-500);}
+.tabBtn {padding: 7px 10px; background-color: var(--white); border: 1px solid var(--grey-500); border-bottom: none; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; font-weight: var(--fw-medium); color: var(--font-color-040); cursor: pointer; transition: var(--transition);}
+.active {background-color: var(--main-500); border-color: transparent; font-weight: var(--fw-bold); color: var(--white)}
+
+.tabContainer {display: flex; flex-direction: column; }
+.tabContent {display: flex; height: fit-content; visibility: visible; opacity: 1;}
+.tabContentHide {height: 0vh; visibility: hidden; overflow: hidden; opacity: 0; transition: var(--transition);}
+.urlInput {flex: 1 1; margin-right: 1.25em;}
+button.viewBtn {background-color: var(--grey-300); color: var(--grey-800);}
+
+/* 문항 */
+.spanWrap {display: inline-flex; position: relative;}
+.spanWrap small {position: relative; padding-top: 1px; cursor: pointer;}
+
+/* 문제 미리보기 */
+.addExamWrap .btnWrap {padding-bottom: var(--page-padding);}
+.btnWrap button {width: 17em;}
+button.viewExamBtn {background-color: var(--grey-300); color: var(--grey-800); border: 1px solid #dadada;}
+button.viewExamBtn:hover, button.viewExamBtn:active {background-color: var(--grey-400); border: 1px solid #b5b5b5;}
+
+/* side-nav */
+article.sideNav {width: 320px; height: 100%; position: fixed; z-index: 1; top: 50px; right: 0; background-color: var(--white); box-shadow: var(--shadow010-reverse); transition: var(--transition);}
+article.hideNav {right: -320px;}
+.navHeader {display: flex; justify-content: center; align-items: center; padding: 12px 0; background-color: var(--main-700); color: var(--white);}
+.navHeader p {user-select: none;}
+button.sideNavBtn {position: absolute; left: 0; margin-right: 0; padding: 0.4375em; transform: translateX(-100%); transition: var(--transition); background-color: var(--main-300); border-top-right-radius: 0; border-bottom-right-radius: 0;}
+button.sideNavBtn svg {margin-right: 0;}
+.sideNav button.sideNavBtn svg {transform: rotate(0);  transition: var(--transition);}
+.hideNav button.sideNavBtn svg {transform: rotate(-180deg);}
+.navHeader p svg {margin-right: 2px;}
+.navHeader p b {display: inline-block; margin-right: 4px; font-size: var(--fs-24);}
+
+.navBody {height: calc(100% - 50px - 64px);}
+.navBody li {display: flex; align-items: center; height: 38px; padding: 0 0.75em; /*outline: 2px dotted var(--main-300);*/}
+.navBody li:last-child {outline: none;}
+
+.navBody button {border-radius: 0;}
+.navBody .numBtn {display: flex; justify-content: center; flex-basis: 38px; /*width: 32px;*/ height: 38px; padding: 0; text-align: center; background-color: var(--main-200); color: var(--main-300); cursor: default;}
+.navBody .btnWrap button {width: 24px; height: 24px; padding: 0; background-color: transparent;}
+.navBody .btnWrap button svg {margin-right: 0;}
+
+.examTitle {display: flex; width: 55%; min-width: 55%; position: relative; margin-right: 0.75em;}
+.examTitle span {display: inline-block; width: 100%; cursor: default;}
+.examTitle p {width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.examTitle :not(:first-child) {display: none;}
+.examTitle p:first-child {text-align: left !important;}
+.examTitle p:first-child strong {font-weight: var(--fw-medium);}
+.examTitle p span, .examTitle span {width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+/* toolTip */
+.examTitle .toolTip,
+.spanWrap small::after {visibility: hidden; width: 160%; height: 0vh; position: absolute; top: 100%; left: 50%; z-index: 99; margin-top: 8px; padding: 0 12px; border-radius: 6px; transform: translateX(-50%); background-color: var(--grey-700); color: var(--white); transition: var(--transition);}
+.examTitle .toolTip {height: fit-content;}
+.spanWrap small::after {content: "정답에 체크해주세요"; width: 120px; height: fit-content; margin-top: 4px;}
+
+.examTitle:hover .toolTip,
+.spanWrap small:hover::after {visibility: visible; padding: 0.4375em 0.75em;}
+.spanWrap small:hover::after {padding: 9px 0.75em;}
+
+.toolTip::before {display: inline; visibility: hidden; content: ""; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); border-top: 12px solid none; border-bottom: 12px solid var(--grey-700); border-left: 12px solid transparent; border-right: 12px solid transparent; transition: var(--transition);}
+.spanWrap .toolTip::before {top: 100%; transform: translate(-50%, -50%); margin-top: 4px;}
+.examTitle:hover .toolTip::before,
+.spanWrap small:hover::before {visibility: visible;}
+
+@media all and (max-width: 1380px) {
+    .inputsContainer {flex-direction: column;}
+    .inputsContainer article:nth-of-type(1) {margin-bottom: 2.125em;}
+    .inputsContainer article:nth-of-type(2) {margin-left: 0;}
+}

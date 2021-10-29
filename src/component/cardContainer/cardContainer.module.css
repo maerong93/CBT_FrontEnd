@@ -1,0 +1,4 @@
+.cardTitle {display: flex; justify-content: space-between; align-items: center; padding: 8px 20px; background-color: var(--main-700);}
+.cardTitle span {position: relative; font-size: 2rem; font-weight: var(--fw-bold); color: var(--white);}
+.cardTitle button {background: transparent; transform: rotate(0); transition: var(--transition);}
+.cardTitle .close {transform: rotate(180deg);}

@@ -1,0 +1,16 @@
+.pageTitle {display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1em;}
+
+.title {display: flex; align-items: center; margin: 0; font-weight: normal;}
+.title span {margin-left: 1px; font-size: var(--fs-28); color: var(--font-color-010); letter-spacing: -.4rem;}
+
+/* topBtnWrap */
+.topBtnWrap {display: flex; flex-grow: 0;}
+
+button.listBtn,
+button.addBtn {color: var(--font-color-010);}
+
+button.refreshBtn {margin-left: 0.25em; box-shadow: var(--shadow005);}
+
+.pageTitle button {box-shadow: var(--shadow005);}
+.pageTitle button:hover, .pageTitle button:active {box-shadow: inset -3px -3px 2px 0 rgb(0 0 0 / 7%), var(--shadow000); transform: translate(1px, 1px);}
+/* button.refreshBtn svg {margin-right: 0;} */

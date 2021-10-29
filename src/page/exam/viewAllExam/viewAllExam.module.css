@@ -1,0 +1,57 @@
+.allExamContainer {display: flex; flex-direction: column;}
+.allExamContainer > section:first-of-type {margin-bottom: 4em;}
+
+.warning {width: 940px; position: relative; margin: 0 auto; margin-bottom: 1.5em; font-size: var(--fs-18);}
+.warning b {position: relative; z-index: 2;}
+.warning::after {content: ""; width: 138px; height: 12px; position: absolute; left: 18px; top: 14px; z-index: 1; background-color: #d7c3f1;}
+
+/* allExamWrap */
+.allExamWrap {position: relative; align-self: center; display: flex; flex-direction: column; flex-wrap: wrap; padding: 1.5em 3em; background-color: var(--white); border: 1px solid var(--grey-600); box-shadow: var(--shadow010);}
+
+/* examInfo */
+.examInfo {display: flex; flex-direction: column; justify-content: center; margin: 0; /*padding-bottom: 0.5em;*/  padding-bottom: 1.5em; box-sizing: content-box;}
+.exmaTitle {text-align: center; font-size: var(--fs-24);}
+.infos {width: 100%; display:flex; position: relative; font-size: var(--fs-16); border-bottom: 4px double var(--grey-600); padding-bottom: 1em; }
+.infos li {position: relative; margin-right: 2em;}
+.infos li:first-child::after {content: ""; width: 1px; height: 15px; position: absolute; top: 50%; background-color: var(--grey-500); margin-left: 1em; transform: translateY(-50%);}
+.infos li:last-child {position: absolute; right: 0; margin: 0;}
+
+/* examContainer */
+.tableWrap {padding: 0; box-sizing: content-box;}
+
+.tbodyContainer {padding: 0 2.5em;}
+
+.tableWrap section:last-of-type {margin-bottom: 0;}
+
+.layout2 .allExamWrap {width: 940px;}
+.layout2 .tbodyContainer {width: 100%; column-count: 2; column-rule: 1px solid var(--grey-500); column-gap: 5rem; padding: 0;}
+
+/* topBtn */
+.topBtn {width: 4.2rem; height: 4.2rem; display: flex; justify-content: center; align-items: center; position: fixed; bottom: 4rem; right: 5rem; z-index: 999; padding: 0; background-color: var(--grey-500); border-radius: 50%; box-shadow: var(--shadow005); transition: var(--transition);}
+.topBtn:hover, .topBtn:active {background-color: var(--grey-600); box-shadow: inset -3px -3px 2px 0 rgb(0 0 0 / 7%), var(--shadow000); transform: translate(1px, 1px);}
+.topBtn svg {margin-right: 0; transform: translateY(-1px) rotate(180deg);}
+
+@media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+    body {background-color: transparent; counter-reset: page;}
+
+    header, .allExamContainer > section:first-child, .warning {display: none;}
+
+    .allExamContainer {padding: 0; background-color: transparent;}
+    .allExamWrap {padding: 0; border: none; background-color: transparent; box-shadow: none; box-sizing: content-box;}
+
+    .examInfo {width: calc(100% - 2.5em); position: fixed; left: 50%; transform: translateX(-50%); background-color: var(--white);}
+
+    .tableWrap {display: table; table-layout: fixed; padding: 0 1.4em;}
+
+    .examHeader {height: 100px; /*background-color: #ff000050;*/}
+    .headerSpace {height: 120px; /*background-color: blueviolet;*/}
+
+    /* .tableWrap section {background-color: #ffff0030; border-bottom: 1px solid red;} */
+
+    .footerSpace {height: 50px; /*background: palegreen;*/ opacity: 0.5;}
+
+    .layout2 {display: table-header-group;}
+    .layout2 .tbodyContainer {width: 100%;}
+    .layout2 .tbodyContainer section {display: block; width: 100%; page-break-inside: avoid;}
+}

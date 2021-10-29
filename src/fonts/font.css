@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "MalgunGothic";
+    font-weight: normal;
+    src: url("MalgunGothic.eot");
+    src: url("MalgunGothic.woff") format(‘woff’);
+} 
+body {font-family: "MalgunGothic";} 

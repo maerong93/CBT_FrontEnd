@@ -1,0 +1,163 @@
+.modalShow {display: block; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 9999; background-color: var(--modal-bg);}
+.modalHide {display: none;}
+
+.container {display: flex; flex-direction: column; width: 80%; height: 80%; position: absolute; top: 50%; left: 50%; z-index: 9999; transform: translate(-50%, -50%); background-color: var(--white); border-radius: 1.25em; overflow: hidden;}
+.header {display: flex; justify-content: center; align-items: center; min-height: 80px; padding: 20px; background-color: var(--main-600); font-size: var(--fs-18);}
+.header h1 {flex: 1 1; text-align: center; margin-right: 20px; color: var(--white)}
+button.closeBtn {display: inline-flex; justify-content: center; align-items: center; width: 44px; height: 44px; border-radius: 50%; padding: 0;}
+button.closeBtn svg {margin-right: 0;}
+
+.body {position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 2em; /*border-top: 1px solid var(--line-030);*/}
+.imgBox {height: fit-content;}
+
+/* 문제 미리보기 */
+.viewExam {display: flex; flex-direction: column; flex-wrap: wrap; width: 760px; letter-spacing: -2px !important;}
+
+/* examInfos */
+.examInfos {display: flex; align-items: center; gap: 0 1em; margin-bottom: 3em; padding: .5em .8em; font-weight: var(--fw-bold); border-left: 0.5rem solid var(--warning-400); background-color: var(--grey-100); border-radius: 0.6rem; border-top-left-radius: .2em; border-bottom-left-radius: .2em;}
+.examInfos li::after {content: "|"; margin-left: 16px; color: var(--grey-300);}
+.examInfos li:last-child::after {content: "";}
+
+/* 시험 내용 */
+.titleWrap {width: 100%; display: flex; justify-content: space-between; margin-bottom: 4rem;}
+
+.titleWrap > li:first-of-type {flex: 0 0 80%;}
+.titleWrap > li:last-of-type {width: 39.7px;}
+.title {display: flex; flex-direction: column;}
+.title > :first-of-type {text-align: justify; text-indent: -30px;}
+.title > :not(:first-of-type), .title table {text-indent: 0 !important;}
+.title, .subTitle {max-width: 100%; font-size: var(--fs-20); font-weight: var(--fw-medium); white-space: pre-wrap; word-break: keep-all; word-wrap: break-word; line-height: 1.6;}
+
+.subTitle {display: flex; flex-direction: column; margin-bottom: 4rem; padding: 0.7em; line-height: 1.6; border: 1px solid var(--grey-900);}
+.subTitle ul, .subTitle ol {display: flex; flex-direction: column;}
+.subTitle li::marker {margin: 0;}
+.subTitle ol li {list-style-type: auto;}
+
+/* editor */
+/* .title sup, .subTitle sup, .title sub, .subTitle sub {font-size: 1.5rem;} */
+.title li, .subTitle li {list-style: inside;}
+table[border]:not([border="0"]):not([style*=border-color]) td, table[border]:not([border="0"]):not([style*=border-color]) th {border-color: #000}
+.title table th, .subTitle table th, .title table td, .subTitle table td {padding: 0.8rem;}
+
+.imgContainer {width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; height: auto; margin-bottom: 2.5em;}
+.imgRow {flex-direction: row;}
+.imgBox {max-width: 300px; display: flex; flex-direction: column; align-items: center; width: 100%; height: auto; margin-right: 0.625em; margin-bottom: 1.25em;}
+.imgBox:last-child {margin-right: 0;}
+.imgBox img {width: 100%; border: 1px solid var(--grey-900);}
+
+.videoContainer {display: flex; flex-direction: column; margin-bottom: 2.5em;}
+video {margin-bottom: 0.2em;}
+.videoContainer b {width: 800px; text-align: center;}
+
+.sheetContainer {width: 100%; margin-bottom: 2.5em;}
+.sheet {margin-bottom: 20px;}
+.sheet:last-child {margin-bottom: 0;}
+
+.sheet .sheetText {width: calc(100% - 40px - 20px); display: flex;}
+.sheet .sheetText > span:first-child {margin-left: -30px; font-size: var(--fs-20);}
+.sheet .sheetText .selectNum {margin-right: 14px;}
+.sheet .sheetText pre {flex: 0 1 90%; overflow: visible; display: flex; flex-direction: column; white-space: pre-wrap; text-align: justify; font-size: var(--fs-20);}
+
+.sheet .sheetImg img {max-width: 440px; max-height: 210px; margin-top: 10px; border: 1px solid #111;}
+.sheet .sheetImg b {letter-spacing: -1.6px;}
+
+.sheet:nth-child(1) .selectNum::after {content: "①";}
+.sheet:nth-child(2) .selectNum::after {content: "②";}
+.sheet:nth-child(3) .selectNum::after {content: "③";}
+.sheet:nth-child(4) .selectNum::after {content: "④";}
+.sheet:nth-child(5) .selectNum::after {content: "⑤";}
+.sheet:nth-child(6) .selectNum::after {content: "⑥";}
+.sheet:nth-child(7) .selectNum::after {content: "⑦";}
+.sheet:nth-child(8) .selectNum::after {content: "⑧";}
+.sheet:nth-child(9) .selectNum::after {content: "⑨";}
+.sheet:nth-child(10) .selectNum::after {content: "⑩";}
+.sheet:nth-child(11) .selectNum::after {content: "⑪";}
+.sheet:nth-child(12) .selectNum::after {content: "⑫";}
+.sheet:nth-child(13) .selectNum::after {content: "⑬";}
+.sheet:nth-child(14) .selectNum::after {content: "⑭";}
+.sheet:nth-child(15) .selectNum::after {content: "⑮";}
+
+.noContents {font-size: var(--fs-20); text-align: center;}
+
+button.prevBtn, button.nextBtn {width: 4rem; height: 4rem; position: fixed; top: 50%; margin: 0; border-radius: 50%;}
+button.prevBtn {left: 2em;}
+button.nextBtn {right: 2em;}
+button.prevBtn:hover, button.nextBtn:hover,
+button.prevBtn:active, button.nextBtn:active {background-color: var(--grey-400);}
+
+button.prevBtn svg, button.nextBtn svg {margin: 0; transform: rotate(90deg);}
+button.nextBtn svg {transform: rotate(-90deg);}
+
+@media all and (max-width:1280px) {
+    .viewExam {letter-spacing: -1.6px !important;}
+    .title, .subTitle, .sheet .sheetText > span:first-child, .sheet .sheetText pre {font-size: var(--fs-16);}
+    .sheet .sheetText .selectNum {margin-right: 6px;}
+    .subTitle {padding: 1.4rem;}
+}
+
+@media all and (max-width:1200px) {
+    .videoContainer video {width: 500px;}
+    .videoContainer b {width: 500px;}
+}
+
+.smallExam {width: 100%;}
+
+.smallExam .titleWrap li:first-child {flex: 0 0 100%;}
+.smallExam .titleWrap li:last-child {display: none;}
+
+.smallExam .title {text-indent: -20px;}
+
+.smallExam .subTitle {width: calc(100% - 20px);}
+
+.smallExam .title,
+.smallExam .subTitle,
+.smallExam .imgContainer,
+.smallExam .sheetImg {margin-left: 20px;}
+
+.smallExam .imgContainer .imgBox,
+.smallExam .sheetImg img {max-width: 150px;}
+
+.smallExam .titleWrap,
+.smallExam .subTitle,
+.smallExam .imgContainer,
+.smallExam .imgBox,
+.smallExam .sheetContainer,
+.smallExam .sheetContainer .sheet {margin-bottom: 1rem;}
+
+.smallExam .imgBox:last-child {margin-bottom: 0;}
+
+.smallExam .sheetText .selectNum {margin-left: 0; margin-right: 10px;}
+
+.smallExam .title,
+.smallExam .subTitle,
+.smallExam .sheetText .selectNum,
+.smallExam .imgContainer .imgBox b,
+.smallExam .sheetText .text {font-size: var(--fs-12);}
+
+.smallExam .imgRow,
+.smallExam .sheetContainer {width: 100%; display: block; float: left;}
+
+@media print {
+    .viewExam {display: block; width: auto; height: fit-content; page-break-inside: avoid; flex-grow: 0;}
+    .title, .subTitle, .sheet .selectNum, .sheet .text {font-size: var(--fs-20);}
+
+    .imgRow,
+    .sheetContainer,
+    .sheet,
+    .sheetText {width: 100%; display: block; float: left;}
+    
+    .viewExam .imgContainer {display: block;}
+    .viewExam .imgContainer .imgBox {display: block;}
+    .imgContainer.imgRow .imgBox {float: left;}
+    .viewExam .imgContainer .imgBox b {display: inline-block; width: 100%; text-align: center;}
+
+    .viewExam .sheetText {position: relative; display: block;}
+
+    .viewExam .sheet {position: relative;}
+
+    /* .viewExam .selectNum {margin-top: -2px;} */
+    .viewExam .selectNum, .viewExam .text  {position: relative; float: left;}
+
+    .smallExam .imgContainer .imgBox {display: block; max-width: 150px;}
+    .smallExam .clear {width: 100%;}
+}
